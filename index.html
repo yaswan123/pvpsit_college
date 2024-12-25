@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="about.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: #fff;
+            padding: 10px 0;
+            border-bottom: 2px solid #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        header img {
+            height: 70px;
+            margin-right: 20px;
+        }
+        nav {
+            background-color: #444;
+            padding: 10px;
+            color: white;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        h2 {
+            text-align: center;
+            color: green;
+            margin-top: 20px;
+        }
+        .content {
+            display: none;
+            margin: 20px;
+        }
+        table {
+            width: 60%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            background-color: #fff;
+        }
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+        th {
+            background-color: #444;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #e6f7ff;
+        }
+        .course-card {
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            text-align: center;
+            width: 200px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            background-color: #fff;
+        }
+        .courses-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .about-us-container {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 20px;
+            padding: 20px;
+        }
+        .about-photo {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+        .about-photo img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .about-content {
+            flex: 2;
+            padding: 20px;
+        }
+    </style>
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.content');
+            sections.forEach(section => section.style.display = 'none');
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <img src="https://th.bing.com/th/id/OIP.Vq4JOitmlBGBU3FblSs2SQAAAA?rs=1&pid=ImgDetMain" alt="College Logo">
+        <div>
+            <h1>Prasad V. Potluri Siddhartha Institute of Technology</h1>
+            <p>(Autonomous, Approved by AICTE, Affiliated to JNTU Kakinada)</p>
+        </div>
+    </header>
+    <nav>
+        <a href="#" onclick="showSection('courses')">Home</a>
+        <a href="#" onclick="showSection('placements')">Placements</a>
+        <a href="#" onclick="showSection('admissions')">Admissions</a>
+        <a href="#" onclick="showSection('about-us')">About Us</a>
+    </nav>
+    <div id="courses" class="content" style="display: block;">
+        <h2>Courses Offered</h2>
+        <div class="courses-container">
+            <div class="course-card">
+                <h3>B.Tech - CSE</h3>
+                <p>Department of Computer Science and Engineering</p>
+            </div>
+            <div class="course-card">
+                <h3>B.Tech - CSE (AI & ML)</h3>
+                <p>Artificial Intelligence & Machine Learning</p>
+            </div>
+            <div class="course-card">
+                <h3>B.Tech - CSE (Data Science)</h3>
+                <p>Data Science Specialization</p>
+            </div>
+            <div class="course-card">
+                <h3>B.Tech - IT</h3>
+                <p>Information Technology Department</p>
+            </div>
+        </div>
+        <div class="home-description">
+            <p style="text-align: center; margin: 20px;">
+                At PVPSIT, we strive to provide our students with a comprehensive and forward-thinking curriculum.  
+                Our courses are designed to equip students with the skills and knowledge required to excel in today's competitive world.  
+                Join our diverse programs and embark on an educational journey toward excellence and innovation.
+            </p>
+        </div>
+    </div>
+    <div id="placements" class="content">
+        <h2>Placements Data</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>S.No</th>
+                    <th>Company Name</th>
+                    <th>Student Name</th>
+                    <th>Package (LPA)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>1</td><td>Google</td><td>XYZ Name</td><td>25 LPA</td></tr>
+                <tr><td>2</td><td>Amazon</td><td>ABC Name</td><td>20 LPA</td></tr>
+                <tr><td>3</td><td>Microsoft</td><td>LMN Name</td><td>30 LPA</td></tr>
+                <tr><td>4</td><td>Infosys</td><td>PQR Name</td><td>10 LPA</td></tr>
+                <tr><td>5</td><td>TCS</td><td>DEF Name</td><td>8 LPA</td></tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="admissions" class="content">
+        <h2>Admission Fees</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Department</th>
+                    <th>Annual Fee (INR)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>B.Tech - CSE</td><td>₹70,000</td></tr>
+                <tr><td>B.Tech - CSE (AI & ML)</td><td>₹70,000</td></tr>
+                <tr><td>B.Tech - CSE (Data Science)</td><td>₹70,000</td></tr>
+                <tr><td>B.Tech - IT</td><td>₹70,000</td></tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="about-us" class="content">
+        <h2>About PVPSIT</h2>
+        <div class="about-us-container">
+            <div class="about-photo">
+                <img src="https://www.pvpsiddhartha.ac.in/new_images/about.jpg" alt="College Building">
+            </div>
+            <div class="about-content">
+                <h2>Welcome to PVPSIT</h2>
+                <p>
+                    Established in 1997, PVPSIT has been a beacon of education and innovation. 
+                    Nestled in the heart of Vijayawada, Andhra Pradesh, our campus spans over 60 acres and offers a vibrant environment for learning and growth.
+                </p>
+                <p>
+                    Our college is known for its exceptional academic programs, experienced faculty, and state-of-the-art facilities. 
+                    With a commitment to nurturing creativity and excellence, we offer a wide range of courses in science, technology, arts, and humanities.
+                </p>
+                <p>
+                    We take pride in fostering an inclusive and supportive community, where students are encouraged to achieve their full potential. 
+                    Join us on a journey of discovery, innovation, and success at PVPSIT.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
